@@ -11,7 +11,7 @@ import Home from './componets/Home';
 import Blogs from './componets/blogs';
 import Respiracion from './componets/tecRespiracion';
 import NoPage from './componets/nopage';
-import logo from './assets/logo_calm.jpg'
+import logo from './assets/logo_calm.png'
 
 function App() {
   const [count, setCount] = useState(0);
