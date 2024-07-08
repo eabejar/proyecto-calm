@@ -1,68 +1,51 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* App.css */
 
 body {
-  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column; /* Asegura que el contenido se extienda verticalmente */
+}
+
+
+.sidebar {
+  flex: 0 0 200px; /* Ancho fijo de la barra lateral */
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 14px 20px; /* Aumentamos el padding para botones más grandes */
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #0056b3;
+}
+
+.content {
+  flex: 1; /* Toma todo el espacio restante */
+  padding: 20px;
+  font-size: 18px; /* Aumentamos el tamaño de fuente del contenido */
+  line-height: 1.6; /* Ajustamos el interlineado */
+  overflow-y: auto; /* Añadido para permitir desplazamiento vertical si es necesario */
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: #333;
+  font-size: 24px; /* Aumentamos el tamaño de fuente del título */
+  margin-bottom: 20px; /* Añadimos un margen inferior */
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.read-the-docs {
+  font-style: italic;
+  color: #666;
 }
